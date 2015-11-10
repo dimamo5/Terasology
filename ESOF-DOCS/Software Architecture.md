@@ -89,7 +89,7 @@ and describe runtime processing nodes. It basically consists of nodes that are n
 the relations between them, represented as an artifact.
 The following deployment diagram refers to the connections in Terasology:
 
-![Deployment diagram](https://github.com/dimamo5/Terasology/blob/develop/ESOF-DOCS/images/sequenceDiagram.png)
+![Deployment diagram](https://github.com/dimamo5/Terasology/blob/develop/ESOF-DOCS/images/DV.png)
 
 As represented in the diagram Terasology needs a computer to be played and the Java Runtime Environment or the Java Development Kit (version 1.7 or higher). 
 It also needs an operation system that can run Java7 or higher. 
