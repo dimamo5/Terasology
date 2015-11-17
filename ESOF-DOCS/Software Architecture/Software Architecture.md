@@ -7,7 +7,7 @@ This report aims to explain Terasology's architecture according to [4 + 1 view m
 
 We begin to make an approach to Terasology's architecture as well as to the model noted above and subsequently an approach a little more specific in respect to each view with the help of illustrative diagrams.
 
-##Terasology's architecture (melhorar um quitos)
+##Terasology's architecture
 
 In Terasology's wiki there is an [Architecture page] (https://github.com/MovingBlocks/Terasology/wiki/Architecture) where we can find references to [Block Architecture](https://github.com/MovingBlocks/Terasology/wiki/Block-architecture), [Entity System Architecture](https://github.com/MovingBlocks/Terasology/wiki/Entity-System-Architecture), [Events and Systems](https://github.com/MovingBlocks/Terasology/wiki/Events-and-Systems) as well as references to other modules's architecture.
 
