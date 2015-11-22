@@ -3,7 +3,7 @@
 Terasology use Jenkins platform with automated tests in order to evaluate code metrics for further analisys.
 Jenkins builds Terasology via Gradle and runs several tests obtaining statistics relatively to coding style, TODO issues, "lead-to-bug-code", unit testing coverage and some other metrics, that can be found on [Terasology's project page on Jenkins] (http://jenkins.terasology.org/view/Statistics/job/Terasology/). <br> Unit testing is writen in JUnit and follows a White-box desing, since the test cases are added as needed and are measured using Jenkins platform.
 
-![Graph](https://github.com/dimamo5/Terasology/new/sergio/ESOF-DOCS/images/graph.png)
+![Graph](https://github.com/dimamo5/Terasology/tree/sergio/ESOF-DOCS/images/graph.png)
 
 The above graph represents the project's unit test code coverage in terms of line coverage / missing and can be seen in the page mentioned before. 
 
