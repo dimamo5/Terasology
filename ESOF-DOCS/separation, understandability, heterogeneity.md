@@ -5,7 +5,7 @@
 ## Separation of concerns
 
 >In computer science, separation of concerns (SoC) is a design principle for separating a computer program into distinct sections,    such that each section addresses a separate concern.
-> found on Wikipedia
+>  - found on Wikipedia
 
 **Terasology** is organized in several high level modules (the most complex) as it was refered in the previous report. These modules handle different tasks and, inside of them, the task is divided between various subunits. For example, [the engine module calls the Context which divides in many other processes that take care of the graphic aspects of the game](https://github.com/dimamo5/Terasology/blob/develop/ESOF-DOCS/Software%20Architecture.md). This way, it is logical to say that the present project has a successful separation of concerns. 
 
