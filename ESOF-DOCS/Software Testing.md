@@ -2,20 +2,30 @@
 
 ##Index
 
+1. [**Degree of testability**](#Degree)
+	* [Controllability](#Controllability)
+	* [Observability](#Observability)
+	* [Isolateability](#Isolateability)
+	* [Separation of concerns](#Separation)
+	* [Understandability](#Understandability)
+	* [Heterogeneity](#Heterogeneity)
+2. [**Test Statistics**](#Stats)
 
+<a name="Degree"/>
 ## Degree of testability
 
 **Terasology** is a very complex project which means that the degree of testability is not easily concluded. The following topics analize the program in every aspect of testability in order to understand whether the software can be tested in a correct way or not.
 
 The testability of software components (modules) can be determined by many factors such as:
 
-1. Controllability: The degree to which it is possible to control the state of the component under test (CUT) as required for testing.
-2. Observability: The degree to which it is possible to observe (intermediate and final) test results.
-3. Isolateability: The degree to which the component under test (CUT) can be tested in isolation.
-4. Separation of concerns: The degree to which the component under test has a single, well defined responsibility.
-5. Understandability: The degree to which the component under test is documented or self-explaining.
-6. Heterogeneity: The degree to which the use of diverse technologies requires to use diverse test methods and tools in parallel.
+1. **Controllability**: The degree to which it is possible to control the state of the component under test (CUT) as required for testing.
+2. **Observability**: The degree to which it is possible to observe (intermediate and final) test results.
+3. **Isolateability**: The degree to which the component under test (CUT) can be tested in isolation.
+4. **Separation of concerns**: The degree to which the component under test has a single, well defined responsibility.
+5. **Understandability**: The degree to which the component under test is documented or self-explaining.
+6. **Heterogeneity**: The degree to which the use of diverse technologies requires to use diverse test methods and tools in parallel.
 
+<a name="Controllability"/>
 ###Controllability
 
 **Controllability** is related to the degree to which the **Component Under Test** has a single, well defined responsibility. 
@@ -28,6 +38,7 @@ components form other modules or even components external to Terasology. It all 
 others controllability tends to be low. 
 Testing components from modules or even the deepest engine modules can lead to a a higher controlability rather than testing the engine itself. 
 
+<a name="Observability"/>
 ###Observability
 
 **Observability** is related to the degree to which it is possible to observe (intermediate and final) test results. 
@@ -37,8 +48,8 @@ Jenkins is executed every time there is a single engine build or pull requests s
  we can find not just the results but also metrics across a large amount of code, such as quantity and coverage. Althout the same metrics are available for all modules they're not always active or appropriate. 
 Other modules just don't have any unit tests because the author hasn't added any.
  
- Beyond unit tests they have several other code metrics - in order of appearance in Jenkins:
- 
+ Beyond unit tests they have several other code metrics  - in order of appearance in Jenkins:
+ #Metrics
 * Checkstyle: scans our code style / conventions to make sure the code is consistently using the same style everywhere
 * FindBugs: scans for some common code drawbacks that can easily lead to bugs
 * PMD: more of the same - style, common issues, etc
@@ -46,6 +57,7 @@ Other modules just don't have any unit tests because the author hasn't added any
 * Static analysis: aggregate of the above (all them of added together)
 * Code coverage: how many lines of code are actually exercised by the unit tests
 
+<a name="Isolateability"/>
 ###Isolateability
 
 **Isolateability** is related to the degree to which the component under test (CUT) can be tested in isolation.
@@ -55,7 +67,7 @@ Once modules aren't independent from each other it is hard to separate Isolateab
 So it wouldn't make sense to calculate the Isolateability’s degree for Terasology because it is dificult to understand 
 in which situations it would make sence to test the component isolated from the rest.
 
-
+<a name="Separation"/>
 ### Separation of concerns
 
 >In computer science, separation of concerns (SoC) is a design principle for separating a computer program into distinct sections,    such that each section addresses a separate concern.
@@ -65,6 +77,7 @@ in which situations it would make sence to test the component isolated from the 
 
 In our opinion, this separation is turns out to be very efficient since it scatters the responsability through different units which can lead to a better performance and increases the degree of testability of each unit. There is always room for improvement but the current separation permits a high level of testability.
 
+<a name="Understandability"/>
 ### Understandability
 
 Understandability is a contorversial theme for testability. In fact, it is a gruelling task to classify the understandability of software since this aspect is different for each individual. As many authors point out, the degree of understandability is also affected by the used language. It is safe to say that the language used in the project (Java) is a clear and straight forward one which contributes to facilitate the contribution of the code.
@@ -73,6 +86,7 @@ About the concrete aspects, the project has many ways to communicate with extern
 
 To sum up, it is safe to say that the program is well documented and its degree of understandability can be refered to as high. Although, it is imperative to organize the information and make it more accessible and less confusing.
 
+<a name="Heterogeneity"/>
 ### Heterogeneity
 
 Heterogeneity serves the purpose of revealing how many external resources are used in the project. In this aspect, **Terasology** can be considered a heterogeneous program since it uses a wide range of external technologies. In fact, in order to run the game, many libraries are needed. The list of dependencies can be consulted in the file that permits the compilation of the code. Libraries related to Java such as the LWJGL (refered in previous reports), Jinput and many others are the most popular and contribute by adding functionalities to the game. On the list there are some librarys developed specifically for the project such as **gestalt-module**, **gestalt-asset-core**, **TeraMath**, **tera-bullet** and **splash-screen**. Some of the used technologies are the following:
@@ -90,12 +104,14 @@ Heterogeneity serves the purpose of revealing how many external resources are us
 The use of external technologies can rise to be problematic due to the fact that it is not very clear whether the librarys are completely trustworthy or not. The libraries available for Java are well known and popular but this does not guarantee that they are bulletproof. A test may fail due to a library and, in this case, it is hard to distinguish whether the mistake is in the tested code or the resources. The tests must be sensible to this problem.
 
 To conclude, the project has a high level of heterogeneity. Although, it is relevant to refer that the use of external dependencies should be managed with great care and caution. Problems may arise due to the external dependencies which could be disastrous for the project for the error would be very hard to spot. 
+<br>
 
 
+<a name="Stats"/>
 ##Test Statistics
 
 Terasology use Jenkins platform with automated tests in order to evaluate code metrics for further analisys.
-Jenkins builds Terasology via Gradle and runs several tests obtaining statistics relatively to coding style, TODO issues, "lead-to-bug-code", unit testing coverage and some other metrics, that can be found on [Terasology's project page on Jenkins] (http://jenkins.terasology.org/view/Statistics/job/Terasology/). <br> Unit testing is writen in JUnit and follows a White-box desing, since the test cases are added as needed and are measured using Jenkins platform.
+Jenkins builds Terasology via Gradle and runs several tests obtaining [various statistics](#Metrics)  that can be found on [Terasology's project page on Jenkins] (http://jenkins.terasology.org/view/Statistics/job/Terasology/). <br> Unit testing is writen in JUnit and follows a White-box desing, since the test cases are added as needed and are measured using Jenkins platform.
 
 ![Graph](https://github.com/dimamo5/Terasology/blob/sergio/ESOF-DOCS/images/graph.png)
 
