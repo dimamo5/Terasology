@@ -75,7 +75,7 @@ in which situations it would make sence to test the component isolated from the 
 
 **Terasology** is organized in several high level modules (the most complex) as it was refered in the previous report. These modules handle different tasks and, inside of them, the task is divided between various subunits. For example, [the engine module calls the Context which divides in many other processes that take care of the graphic aspects of the game](https://github.com/dimamo5/Terasology/blob/develop/ESOF-DOCS/Software%20Architecture.md). This way, it is logical to say that the present project has a successful separation of concerns. 
 
-In our opinion, this separation is turns out to be very efficient since it scatters the responsability through different units which can lead to a better performance and increases the degree of testability of each unit. There is always room for improvement but the current separation permits a high level of testability.
+In our opinion, this separation turns out to be very efficient since it scatters the responsability through different units which can lead to a better performance and increases the degree of testability of each unit. There is always room for improvement but the current separation permits a high level of testability.
 
 <a name="Understandability"/>
 ### Understandability
@@ -89,7 +89,7 @@ To sum up, it is safe to say that the program is well documented and its degree 
 <a name="Heterogeneity"/>
 ### Heterogeneity
 
-Heterogeneity serves the purpose of revealing how many external resources are used in the project. In this aspect, **Terasology** can be considered a heterogeneous program since it uses a wide range of external technologies. In fact, in order to run the game, many libraries are needed. The list of dependencies can be consulted in the file that permits the compilation of the code. Libraries related to Java such as the LWJGL (refered in previous reports), Jinput and many others are the most popular and contribute by adding functionalities to the game. On the list there are some librarys developed specifically for the project such as **gestalt-module**, **gestalt-asset-core**, **TeraMath**, **tera-bullet** and **splash-screen**. Some of the used technologies are the following:
+Heterogeneity serves the purpose of revealing how many external resources are used in the project. In this aspect, **Terasology** can be considered a heterogeneous program since it uses a wide range of external technologies. In fact, in order to run the game, many libraries are needed. The list of dependencies can be consulted in the file that permits the compilation of the code. Libraries related to Java such as the LWJGL (refered in previous reports), Jinput and many others are the most popular and contribute by adding functionalities to the game. On the list there are some librarys developed specifically for the project such as **gestalt-module**, **gestalt-asset-core**, **TeraMath**, **tera-bullet** and **splash-screen**. The following are some of the used technologies:
 
 1. **guava**, **netty**, **gson**
 	* for purposes of networking and memory
