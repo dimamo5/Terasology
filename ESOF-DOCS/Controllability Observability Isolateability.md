@@ -45,3 +45,5 @@ Once modules aren't independent from each other it is hard to separate Isolateab
  the rest of the modules and even with other components the test can be right or wrong without necessarily be right or wrong. 
 So it wouldn't make sense to calculate the Isolateability’s degree for Terasology because it is dificult to understand 
 in which situations it would make sence to test the component isolated from the rest.
+
+
