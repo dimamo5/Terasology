@@ -30,19 +30,19 @@ The testability of software components (modules) can be determined by many facto
 
 **Controllability** is related to the degree to which the **Component Under Test** has a single, well defined responsibility. 
 All software components are part of a module that can be connected to a lot of other modules. Controllability is defined as the effort it takes to provide 
-a program with the needed inputs, in terms of values, operations and behaviors. As mention in the [forum] (http://forum.terasology.org/threads/development-methodology-and-hi-students-from-porto.1387/) if we take a look into 
+a program with the needed inputs, in terms of values, operations and behaviors. As mentioned in the [forum] (http://forum.terasology.org/threads/development-methodology-and-hi-students-from-porto.1387/) if we take a look into 
 engine module, which is associated with a lot of other modules, controllability tends to be low because it is harder to 
-provide the system with testes for all possible situations in different cases. However when testing an isolated component, controllability must be higher 
-because the environment in which the test will run is going to be mcuh smaller and controlable. Its interaction is limited to engine itself or
-components form other modules or even components external to Terasology. It all dependes on the situation. In embebed modules or modules that depend from 
+provide the system with tests for all possible situations in different cases. However when testing an isolated component, controllability must be higher 
+because the environment in which the test will run is going to be much smaller and controlable. Its interaction is limited to engine itself or
+components form other modules or even components external to Terasology. It all dependes on the situation. In embedded modules or modules that depend from 
 others controllability tends to be low. 
-Testing components from modules or even the deepest engine modules can lead to a a higher controlability rather than testing the engine itself. 
+Testing components from modules or even the deepest engine modules can lead to a higher controlability rather than testing the engine itself. 
 
 <a name="Observability"/>
 ###Observability
 
 **Observability** is related to the degree to which it is possible to observe (intermediate and final) test results. 
-In Terasology as they mention in the [forum] (http://forum.terasology.org/threads/development-methodology-and-hi-students-from-porto.1387/) they use Jenking to generate test code automatically it is written in JUnit. 
+In Terasology as they mention in the [forum] (http://forum.terasology.org/threads/development-methodology-and-hi-students-from-porto.1387/) they use Jenkins to generate test code automatically which is written in JUnit. 
 Jenkins is executed every time there is a single engine build or pull requests submitted to GitHub in order to prevent messing with everything done so far.
 [Here] (http://jenkins.terasology.org/job/Terasology/) we can find the JUnit test results and in the [statistics webpage] (http://jenkins.terasology.org/view/Statistics/)
  we can find not just the results but also metrics across a large amount of code, such as quantity and coverage. Althout the same metrics are available for all modules they're not always active or appropriate. 
@@ -62,10 +62,10 @@ Other modules just don't have any unit tests because the author hasn't added any
 
 **Isolateability** is related to the degree to which the component under test (CUT) can be tested in isolation.
 Once modules aren't independent from each other it is hard to separate Isolateability from Controllability, what we are trying to say
- is that a lot of the components behaviour is related to how it interacts with the rest of the system. For example depending on how the component interacts with 
- the rest of the modules and even with other components the test can be right or wrong without necessarily be right or wrong. 
+ is that a lot of the component's behaviour is related to how it interacts with the rest of the system. For example depending on how the component interacts with 
+ the rest of the modules and even with other components the test can be right or wrong without necessarily being right or wrong. 
 So it wouldn't make sense to calculate the Isolateability’s degree for Terasology because it is dificult to understand 
-in which situations it would make sence to test the component isolated from the rest.
+in which situations it would make sense to test the component isolated from the rest.
 
 <a name="Separation"/>
 ### Separation of concerns
@@ -82,7 +82,7 @@ In our opinion, this separation turns out to be very efficient since it scatters
 
 Understandability is a contorversial theme for testability. In fact, it is a gruelling task to classify the understandability of software since this aspect is different for each individual. As many authors point out, the degree of understandability is also affected by the used language. It is safe to say that the language used in the project (Java) is a clear and straight forward one which contributes to facilitate the contribution of the code.
 
-About the concrete aspects, the project has many ways to communicate with external contribuitors. Besides the [forum](http://forum.terasology.org/) and the [issues mechanism](https://github.com/MovingBlocks/Terasology/issues), the most important document to understand the code is the [wiki](https://github.com/MovingBlocks/Terasology/wiki) provided. Although there are many files thorougly explaning many aspects of the code, it may seem confusing and misleading for new members. The organization of the documents is very important to fight this problem. The leading developers are always available to discuss any doubts and to provide any support but the available documents are of the most importance in order to heighten the comprehension degree of the software. 
+About the concrete aspects, the project has many ways to communicate with external contribuitors. Besides the [forum](http://forum.terasology.org/) and the [issues tracking](https://github.com/MovingBlocks/Terasology/issues), the most important document to understand the code is the [wiki](https://github.com/MovingBlocks/Terasology/wiki) provided. Although there are many files thorougly explaning many aspects of the code, it may seem confusing and misleading for new members. The organization of the documents is very important to fight this problem. The leading developers are always available to discuss any doubts and to provide any support but the available documents are of the most importance in order to heighten the comprehension degree of the software. 
 
 To sum up, it is safe to say that the program is well documented and its degree of understandability can be refered to as high. Although, it is imperative to organize the information and make it more accessible and less confusing.
 
@@ -110,7 +110,7 @@ To conclude, the project has a high level of heterogeneity. Although, it is rele
 <a name="Stats"/>
 ##Test Statistics
 
-Terasology use Jenkins platform with automated tests in order to evaluate code metrics for further analisys.
+Terasology uses Jenkins platform with automated tests in order to evaluate code metrics for further analisys.
 Jenkins builds Terasology via Gradle and runs several tests obtaining [various statistics](#Metrics)  that can be found on [Terasology's project page on Jenkins] (http://jenkins.terasology.org/view/Statistics/job/Terasology/). <br> Unit testing is writen in JUnit and follows a White-box desing, since the test cases are added as needed and are measured using Jenkins platform.
 
 ![Graph](https://github.com/dimamo5/Terasology/blob/sergio/ESOF-DOCS/images/graph.png)
