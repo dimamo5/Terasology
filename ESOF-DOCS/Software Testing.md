@@ -49,7 +49,7 @@ Jenkins is executed every time there is a single engine build or pull requests s
 Other modules just don't have any unit tests because the author hasn't added any.
  
  Beyond unit tests they have several other code metrics  - in order of appearance in Jenkins:
- #Metrics
+ 
 * Checkstyle: scans our code style / conventions to make sure the code is consistently using the same style everywhere
 * FindBugs: scans for some common code drawbacks that can easily lead to bugs
 * PMD: more of the same - style, common issues, etc
@@ -120,7 +120,7 @@ The above graph represents the project's unit test code coverage in terms of lin
 * Lines missed: ~40.000
 * Lines covered: ~15.000
 
-According to Jenkins the project as a 25.86% line coverage, moreover most of the project sections doesn't have any kind of unit testing wich reveals some fragility in terms of code reliability and a big limitation when it comes to integration testing and consequently validation testing. <br>Project Lead Cervator refers that there is a lack of testing in the project despite of being one of the project's present goals. [In this thread](http://forum.terasology.org/threads/the-world-of-varied-and-noteworthy-achievements.1209/) he writes about topics as "Automated acceptance testing", "Multiplayer testing", relative to what needs to be implemented in order to make testing easier. <br>
+According to Jenkins the project as a 25.86% line coverage, moreover most of the project sections doesn't have any kind of unit testing which reveals some fragility in terms of code reliability and a big limitation when it comes to integration testing and consequently validation testing. <br>Project Lead Cervator refers that there is a lack of testing in the project despite of being one of the project's present goals. [In this thread](http://forum.terasology.org/threads/the-world-of-varied-and-noteworthy-achievements.1209/) he writes about topics as "Automated acceptance testing", "Multiplayer testing", relative to what needs to be implemented in order to make testing easier. <br>
 
 Since this is a contributor dependent project perhaps with the creation of more intuitive and efficient testing methods it would be possible to obtain higher volume of tests (also higher test quality) from contributors in order to make this project more stable in modular terms and would be easier to accept and integrate developed features thus increasing project's dynamic and cohesion.
 
