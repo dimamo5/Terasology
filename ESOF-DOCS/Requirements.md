@@ -6,6 +6,7 @@
 3. [Validation](#Validation)
 4. [Versioning](#Versioning)
 5. [Use Cases](#Use Cases)
+6. [Domain Model](#Domain)
 
 
 <a name="Introduction"/></a>
@@ -86,3 +87,8 @@ As mentioned before, the project leader tries to get out a release every 2-4 wee
 ![Use Case 2](https://github.com/dimamo5/Terasology/blob/Diogo/ESOF-DOCS/Requirements/images/options.png)
 
 ![Use Case 3](https://github.com/dimamo5/Terasology/blob/Diogo/ESOF-DOCS/Requirements/images/network.png)
+
+<a name="Domain"/>
+##Domain
+
+![Domain Model](https://github.com/dimamo5/Terasology/blob/Diogo/ESOF-DOCS/Requirements/images/domain.png)
