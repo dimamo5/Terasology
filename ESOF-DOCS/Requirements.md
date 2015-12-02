@@ -91,4 +91,4 @@ As mentioned before, the project leader tries to get out a release every 2-4 wee
 <a name="Domain"/>
 ##Domain
 
-![Domain Model](https://github.com/dimamo5/Terasology/blob/Diogo/ESOF-DOCS/Requirements/images/domain.png)
+![Domain Model](https://github.com/dimamo5/Terasology/blob/develop/ESOF-DOCS/Software%20Architecture/images/domain.png)
