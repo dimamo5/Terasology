@@ -94,7 +94,7 @@ As represented in the diagram Terasology needs a computer to be played and the J
 It also needs an operation system that can run Java7 or higher. 
 After running Terasology in the computer, this device can connect to other devices through a dedicated server or a local server, that also need to execute Terasology.
 The main difference between this two connections is that in order to use a local server, one of the players must be the host and the rest 
-must be connected in the same network area wich is not needed using a dedicated server. The players can acess through different networks. 
+must be connected in the same network area which is not needed using a dedicated server. The players can acess through different networks. 
 
 <a name="Process"/>
 ## Process View
