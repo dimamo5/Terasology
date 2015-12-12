@@ -93,4 +93,4 @@ As mentioned before, the project leader tries to get out a release every 2-4 wee
 
 The abstractions chosen for the domain model were the high level ones which characterize the project. This model features abstractions such as the Module Manager, Game Engine and Game Mode. The Game Engine calls a Game Mode which is chosen by the user. The same Game Mode can have zero or more Game Engines. The Module Manager has one Game Engine since, for each time the game is played, a different manager is called. This works on the other direction as well because the game engine calls a module manager every time it runs. The Module Manager itself calls zero or more Modules and a Module has only one Module Manager.
 
-![Domain Model](https://github.com/dimamo5/Terasology/blob/develop/ESOF-DOCS/Software%20Architecture/images/domain.png)
+![Domain Model](https://github.com/dimamo5/Terasology/blob/develop/ESOF-DOCS/Software%20Architecture/images/domain.png?raw=true)
