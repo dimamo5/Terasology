@@ -1,0 +1,9 @@
+Alterações feitas aos relatórios anteriores
+
+1. -- Process Managment and Development.md
+
+	- Adicionado índice, introdução e conclusão.
+
+2. -- Requirements.md
+
+	- Adicionado o domain model e adicionado texto a explicar o mesmo.
